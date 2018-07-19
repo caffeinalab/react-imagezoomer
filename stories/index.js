@@ -1,11 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import ImageZoomer from '../src';
 
-storiesOf('button', module)
-  .add('with text', () => (
-    <button onClick={action('clicked')}>Hello button</button>
-  ))
-  .add('with some emoji', () => (
-    <button onClick={action('clicked')}><span role="img" aria-label="so cool">😀 😎 👍 💯</span></button>
+storiesOf('ImageZoomer', module)
+  .add('default', () => (
+    <div style={{width: '500px', height:'500px'}}> 
+     <ImageZoomer image="https://source.unsplash.com/random" />
+    </div>
   ));   

@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 import utils from './utils'
+
+import style from './style'
 
 class ImageZoomer extends Component {
   constructor(props){
@@ -70,35 +71,37 @@ class ImageZoomer extends Component {
     const {image, className} = this.props
     const { showZoom, position } = this.state
     const zoom = 2
-    const positionImageX = (position.x * zoom);
-    const positionImageY = (position.y * zoom);
-    const styleInner = {
+    const positionImageX = (position.x * zoom)
+    const positionImageY = (position.y * zoom)
+
+    const styleInner = Object.assign({
       transform: `translateY(${position.y}px) translateX(${position.x}px)`,
       visibility: showZoom ? 'visible' : 'hidden'
-    }
+    }, style.imagezoomer__inner)
 
-    const styleImage = {
+    const styleImage = Object.assign({
       width: this.__ref && this.__ref.bb ? (this.__ref.bb.width*zoom)+'px' : 0,
       height: this.__ref && this.__ref.bb ? (this.__ref.bb.height*zoom)+'px' : 0,
       backgroundImage: `url(${image})`,
       transform: `translateY(-${positionImageY}px) translateX(-${positionImageX}px)`
-    }
+    }, style.imagezoomer__inner__image)
+
+    const styleZoomer = Object.assign({
+      backgroundImage: `url(${image})`
+    }, style.imagezoomer)
 
     return <div
-      className={cx("imagezoomer",className)}
+      className={className}
       onMouseMove={showZoom ? this.mouseMoveHandler : null}
       onMouseEnter={this.mouseEnterHandler}
       onMouseLeave={this.mouseLeaveHandler}
       onTouchStart={this.mouseEnterHandler}
       onTouchEnd={this.mouseLeaveHandler}
       ref={this.addRef}
-      style={{
-        backgroundImage: `url(${image})`
-      }}
+      style={styleZoomer}
     >
-    <div className="imagezoomer__inner" style={styleInner}>
-        <div className="imagezoomer__inner__image" style={styleImage}>
-        </div>
+      <div style={styleInner}>
+        <div style={styleImage} />
       </div>
     </div>
   }
