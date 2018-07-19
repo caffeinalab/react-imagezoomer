@@ -1,5 +1,5 @@
 export default {
-  imagezoomer: {
+  zoomercontainer: {
     position: 'relative',
     width: '100%',
     height: '100%',
@@ -7,7 +7,7 @@ export default {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
   },
-  imagezoomer__inner: {
+  zoomer: {
     position: 'absolute',
     top: '-75px',
     left: '-75px',
@@ -19,7 +19,7 @@ export default {
     borderRadius: '50%',
     pointerEvents: 'none',
   },
-  imagezoomer__inner__image: {
+  zoomercontainer__inner__image: {
     position: 'absolute',
     top: '50%',
     left: '50%',

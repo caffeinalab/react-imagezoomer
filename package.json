@@ -4,7 +4,7 @@
   "description": "React component for zoom an image on mouse over",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production parcel build ./src/index.js --public-url ./dist --no-cache",
+    "build": "NODE_ENV=production parcel build ./src/index.js --public-url ./dist --no-cache -s ./stories",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "pretty": "prettier --single-quote --trailing-comma es5 --write 'src/*.js'"
   },

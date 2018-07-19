@@ -74,18 +74,25 @@ class ImageZoomer extends Component {
   }
 
   render() {
-    const { image, className } = this.props;
+    const { image, conf } = this.props;
     const { showZoom, position } = this.state;
     const zoom = 2;
     const positionImageX = position.x * zoom;
     const positionImageY = position.y * zoom;
+
+    const styleZoomer = Object.assign(
+      {
+        backgroundImage: `url(${image})`,
+      },
+      !!conf.zoomerContainerClass ? {} : style.zoomercontainer
+    );
 
     const styleInner = Object.assign(
       {
         transform: `translateY(${position.y}px) translateX(${position.x}px)`,
         visibility: showZoom ? 'visible' : 'hidden',
       },
-      style.imagezoomer__inner
+      !!conf.zommerClass ? {} : style.zoomer
     );
 
     const styleImage = Object.assign(
@@ -97,19 +104,14 @@ class ImageZoomer extends Component {
         backgroundImage: `url(${image})`,
         transform: `translateY(-${positionImageY}px) translateX(-${positionImageX}px)`,
       },
-      style.imagezoomer__inner__image
+      style.zoomercontainer__inner__image
     );
 
-    const styleZoomer = Object.assign(
-      {
-        backgroundImage: `url(${image})`,
-      },
-      style.imagezoomer
-    );
+
 
     return (
       <div
-        className={className}
+        className={conf.zoomerContainerClass}
         onMouseMove={showZoom ? this.mouseMoveHandler : null}
         onMouseEnter={this.mouseEnterHandler}
         onMouseLeave={this.mouseLeaveHandler}
@@ -118,13 +120,17 @@ class ImageZoomer extends Component {
         ref={this.addRef}
         style={styleZoomer}
       >
-        <div style={styleInner}>
+        <div style={styleInner} className={conf.zommerClass}>
           <div style={styleImage} />
         </div>
       </div>
     );
   }
 }
+
+ImageZoomer.defaultProps = {
+  conf: {}
+};
 
 ImageZoomer.propTypes = {
   image: PropTypes.string,
