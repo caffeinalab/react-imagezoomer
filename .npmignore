@@ -1,0 +1,13 @@
+.DS_Store
+*.log
+test
+examples
+.babelrc
+.editorconfig
+.eslintrc.js
+rollup.*
+node_modules
+stories
+docs
+.storybook
+yarn-error.log
