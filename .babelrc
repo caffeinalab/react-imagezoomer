@@ -1,7 +1,18 @@
 {
- "presets": ["react", "es2015", "stage-2"],
+ "presets": [["es2015",{"loose": true, "modules": false}], "react", "stage-2"],
  "plugins": [
    "add-module-exports",
-   "babel-plugin-transform-class-properties"
- ]
+   "babel-plugin-transform-class-properties",
+   "external-helpers"
+ ],
+ "env": {
+    "cjs": {
+      "presets": [
+        ["es2015", {"loose": true, "modules": "commonjs"}]
+      ],
+      "plugins": ["add-module-exports", "babel-plugin-transform-class-properties"]
+    }
+  }
 }
+
+
