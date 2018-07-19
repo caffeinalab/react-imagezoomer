@@ -52,3 +52,29 @@ const conf = {
 }
 const myComponent = () => <ImageZoomer conf={conf} image="https://source.unsplash.com/random">
 ```
+
+
+Contributing
+---
+
+#### **Reporting bugs**
+
+* Open a GitHub issue 
+
+#### **Contributing with patches and bug fixes**
+
+* Open a new GitHub pull request with the patch.
+* Ensure the PR description clearly describes the problem and solution.
+
+
+Contributors
+---
+
+- Riccardo Canella [@thecreazy](https://github.com/thecreazy)
+- Alberto Parziale [@lavolpecheprogramma](https://github.com/lavolpecheprogramma)
+
+
+License
+---
+
+MIT
