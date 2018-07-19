@@ -4,7 +4,8 @@
   "description": "React component for zoom an image on mouse over",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production parcel build ./src/index.js --public-url ./dist --no-cache"
+    "build": "NODE_ENV=production parcel build ./src/index.js --public-url ./dist --no-cache",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "keywords": [
     "react",
@@ -19,6 +20,7 @@
     "react": "^16.4.1"
   },
   "devDependencies": {
+    "@storybook/react": "^3.4.8",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
@@ -26,6 +28,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "parcel": "^1.9.6",
-    "storybook": "^1.0.0"
+    "react-dom": "^16.4.1"
   }
 }
