@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import ImageZoomer from '../src';
+import ImageZoomer from '../dist/lib/index';
 
 import './storybook.css';
 

@@ -2,8 +2,7 @@
  "presets": [["es2015",{"loose": true, "modules": false}], "react", "stage-2"],
  "plugins": [
    "add-module-exports",
-   "babel-plugin-transform-class-properties",
-   "external-helpers"
+   "babel-plugin-transform-class-properties"
  ],
  "env": {
     "cjs": {
