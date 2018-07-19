@@ -107,8 +107,6 @@ class ImageZoomer extends Component {
       style.zoomercontainer__inner__image
     );
 
-
-
     return (
       <div
         className={conf.zoomerContainerClass}
@@ -129,7 +127,7 @@ class ImageZoomer extends Component {
 }
 
 ImageZoomer.defaultProps = {
-  conf: {}
+  conf: {},
 };
 
 ImageZoomer.propTypes = {
