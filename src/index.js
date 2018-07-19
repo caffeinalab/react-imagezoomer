@@ -92,7 +92,7 @@ class ImageZoomer extends Component {
         transform: `translateY(${position.y}px) translateX(${position.x}px)`,
         visibility: showZoom ? 'visible' : 'hidden',
       },
-      !!conf.zommerClass ? {} : style.zoomer
+      !!conf.zoomerClass ? {} : style.zoomer
     );
 
     const styleImage = Object.assign(
@@ -118,7 +118,7 @@ class ImageZoomer extends Component {
         ref={this.addRef}
         style={styleZoomer}
       >
-        <div style={styleInner} className={conf.zommerClass}>
+        <div style={styleInner} className={conf.zoomerClass}>
           <div style={styleImage} />
         </div>
       </div>

@@ -7,8 +7,8 @@ import './storybook.css';
 
 
 const conf = {
- zommerContainerClass: 'imagezoomer',
- zommerClass: 'imagezoomer__inner'
+ zoomerContainerClass: 'imagezoomer',
+ zoomerClass: 'imagezoomer__inner'
 }
 
 storiesOf('ImageZoomer', module)

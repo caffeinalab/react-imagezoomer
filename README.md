@@ -9,10 +9,10 @@ With **React Imagezoomer** you can specify an image and zoom it using your mouse
 Getting started
 ---
 
-1. To include the code locally install `react-imagezoomer` using npm:
+1. To include the code locally install `@caffeina.dev/react-imagezoomer` using npm:
 
   ```
-  npm install react-imagezoomer --save
+  npm install @caffeina.dev/react-imagezoomer --save
   ```
 
 2. To include the code globally from a cdn:
