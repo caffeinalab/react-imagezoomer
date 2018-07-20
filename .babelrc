@@ -10,6 +10,13 @@
         ["es2015", {"loose": true, "modules": "commonjs"}]
       ],
       "plugins": ["add-module-exports", "babel-plugin-transform-class-properties"]
+    },
+    "test": {
+      "presets": [["env"], "react"],
+      "plugins": [
+        "add-module-exports",
+        "babel-plugin-transform-class-properties"
+      ]
     }
   }
 }

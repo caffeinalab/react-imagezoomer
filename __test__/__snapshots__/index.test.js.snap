@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseMove={null}
+  onTouchEnd={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "backgroundImage": "url(https://source.unsplash.com/random)",
+      "backgroundPosition": "center center",
+      "backgroundRepeat": "no-repeat",
+      "backgroundSize": "contain",
+      "height": "100%",
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "background": "white",
+        "border": "1px solid",
+        "borderRadius": "50%",
+        "height": "150px",
+        "left": "-75px",
+        "overflow": "hidden",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "top": "-75px",
+        "transform": "translateY(0px) translateX(0px)",
+        "visibility": "hidden",
+        "width": "150px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "url(https://source.unsplash.com/random)",
+          "backgroundPosition": "center center",
+          "backgroundRepeat": "no-repeat",
+          "backgroundSize": "contain",
+          "height": 0,
+          "left": "50%",
+          "pointerEvents": "none",
+          "position": "absolute",
+          "top": "50%",
+          "transform": "translateY(-0px) translateX(-0px)",
+          "transformOrigin": " top left",
+          "width": 0,
+        }
+      }
+    />
+  </div>
+</div>
+`;

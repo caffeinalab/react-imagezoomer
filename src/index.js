@@ -138,7 +138,6 @@ ImageZoomer.propTypes = {
     zoomerContainerClass:  PropTypes.string,
     zoomerClass: PropTypes.string
   })
- 
 };
 
 export default ImageZoomer;
