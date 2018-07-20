@@ -6,6 +6,8 @@
 
 With **React Imagezoomer** you can specify an image and zoom it using your mouse or your finger.
 
+You can find the preview on [Storybook](https://caffeinalab.github.io/react-imagezoomer/)
+
 Getting started
 ---
 
