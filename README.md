@@ -53,6 +53,15 @@ const conf = {
 const myComponent = () => <ImageZoomer conf={conf} image="https://source.unsplash.com/random">
 ```
 
+you can change the default zoom level passing it in the config props
+
+```js
+const conf = {
+ zoom: 12
+}
+const myComponent = () => <ImageZoomer conf={conf} image="https://source.unsplash.com/random">
+```
+
 
 Contributing
 ---

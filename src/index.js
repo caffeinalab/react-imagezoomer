@@ -133,6 +133,12 @@ ImageZoomer.defaultProps = {
 
 ImageZoomer.propTypes = {
   image: PropTypes.string,
+  conf: PropTypes.shape({
+    zoom: PropTypes.number,
+    zoomerContainerClass:  PropTypes.string,
+    zoomerClass: PropTypes.string
+  })
+ 
 };
 
 export default ImageZoomer;
