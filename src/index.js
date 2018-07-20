@@ -76,7 +76,8 @@ class ImageZoomer extends Component {
   render() {
     const { image, conf } = this.props;
     const { showZoom, position } = this.state;
-    const zoom = 2;
+    const { zoom = 2 } = conf;
+
     const positionImageX = position.x * zoom;
     const positionImageY = position.y * zoom;
 
