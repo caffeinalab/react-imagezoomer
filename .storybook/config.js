@@ -1,5 +1,5 @@
-import { configure } from '@storybook/react';
-import { setOptions } from '@storybook/addon-options'
+import { configure, } from '@storybook/react';
+import { setOptions } from '@storybook/addon-options';
 
 function loadStories() {
   require('../stories/index.js');
@@ -10,6 +10,5 @@ setOptions({
   name: 'react-imagezoomer',
   url: 'http://github.com/caffeinalab',
 })
-
 
 configure(loadStories, module);
