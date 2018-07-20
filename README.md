@@ -17,7 +17,7 @@ Getting started
 
 2. To include the code globally from a cdn:
   ```html
-  <script src="https://unpkg.com/react-imagezoomer/umd/index.min.js"></script>
+  <script src="https://unpkg.com/@caffeina.dev/react-imagezoomer/dist/lib/"></script>
   ```
 
 Dependencies
