@@ -40,8 +40,8 @@ class ImageZoomer extends Component {
     e = utils.normalizeUserPosition(e.nativeEvent || e);
     if (this.__ref) {
       this.__ref.bb = this.__ref.getBoundingClientRect();
-      this.x = e.x - this.__ref.bb.x;
-      this.y = e.y - this.__ref.bb.y;
+      this.x = e.x - this.__ref.bb.left;
+      this.y = e.y - this.__ref.bb.top;
       if (!this.needRaF) return;
       this.needRaF = false;
       window.requestAnimationFrame(
