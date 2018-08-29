@@ -1,6 +1,8 @@
 🔍 React Imagezoomer 🔎
 ===
 
+![imagezoomergif](https://github.com/caffeinalab/react-imagezoomer/blob/master/docs/video.gif)
+
 
 **React Imagezoomer** is an `zoomer` component for [React.js](https://facebook.github.io/react/).
 
