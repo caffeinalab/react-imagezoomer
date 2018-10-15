@@ -74,7 +74,7 @@ class ImageZoomer extends Component {
   }
 
   render() {
-    const { image, conf } = this.props;
+    const { image, conf, alt } = this.props;
     const { showZoom, position } = this.state;
     const { zoom = 2 } = conf;
 
@@ -82,9 +82,7 @@ class ImageZoomer extends Component {
     const positionImageY = position.y * zoom;
 
     const styleZoomer = Object.assign(
-      {
-        backgroundImage: `url(${image})`,
-      },
+      {},
       !!conf.zoomerContainerClass ? {} : style.zoomercontainer
     );
 
@@ -108,20 +106,23 @@ class ImageZoomer extends Component {
       style.zoomercontainer__inner__image
     );
     return (
-      <div
-        className={conf.zoomerContainerClass}
-        onMouseMove={showZoom ? this.mouseMoveHandler : null}
-        onMouseEnter={this.mouseEnterHandler}
-        onMouseLeave={this.mouseLeaveHandler}
-        onTouchStart={this.mouseEnterHandler}
-        onTouchEnd={this.mouseLeaveHandler}
-        ref={this.addRef}
-        style={styleZoomer}
-      >
+      <Fragment>
+        <img
+          src={image}
+          alt={alt}
+          className={conf.zoomerContainerClass}
+          onMouseMove={showZoom ? this.mouseMoveHandler : null}
+          onMouseEnter={this.mouseEnterHandler}
+          onMouseLeave={this.mouseLeaveHandler}
+          onTouchStart={this.mouseEnterHandler}
+          onTouchEnd={this.mouseLeaveHandler}
+          ref={this.addRef}
+          style={styleZoomer}
+        />
         <div style={styleInner} className={conf.zoomerClass}>
           <div style={styleImage} />
         </div>
-      </div>
+      </Fragment>
     );
   }
 }

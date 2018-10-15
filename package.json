@@ -1,6 +1,6 @@
 {
   "name": "@caffeina.dev/react-imagezoomer",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "React component for zoom an image on mouse over",
   "scripts": {
     "dev": "concurrently 'yarn run watch' 'npm run storybook' ",
@@ -13,7 +13,8 @@
     "build:es": "rimraf dist/es && babel ./src -d es --ignore umd.js --out-dir dist/es/",
     "build:cjs": "rimraf dist/lib && cross-env BABEL_ENV=cjs babel ./src -d lib --ignore umd.js  --out-dir dist/lib/",
     "build:umd": "rimraf dist/umd && rollup -c rollup.config.js --out-dir dist/umd/",
-    "test": "NODE_ENV=test jest"
+    "test": "NODE_ENV=test jest",
+    "test:update": "NODE_ENV=test jest --updateSnapshot"
   },
   "keywords": [
     "react",

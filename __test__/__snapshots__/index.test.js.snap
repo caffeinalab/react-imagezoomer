@@ -1,24 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
-  onMouseMove={null}
-  onTouchEnd={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "backgroundImage": "url(https://source.unsplash.com/random)",
-      "backgroundPosition": "center center",
-      "backgroundRepeat": "no-repeat",
-      "backgroundSize": "contain",
-      "height": "100%",
-      "position": "relative",
-      "width": "100%",
+Array [
+  <img
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseMove={null}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+    src="https://source.unsplash.com/random"
+    style={
+      Object {
+        "backgroundPosition": "center center",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "contain",
+        "height": "auto",
+        "position": "relative",
+        "width": "100%",
+      }
     }
-  }
->
+  />,
   <div
     style={
       Object {
@@ -55,6 +56,6 @@ exports[`renders correctly 1`] = `
         }
       }
     />
-  </div>
-</div>
+  </div>,
+]
 `;
