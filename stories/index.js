@@ -6,30 +6,39 @@ import ImageZoomer from '../dist/lib/index';
 
 import './storybook.css';
 
-
 const conf = {
- zoomerContainerClass: 'imagezoomer',
- zoomerClass: 'imagezoomer__inner'
-}
+	zoomerContainerClass : 'imagezoomer',
+	zoomerClass          : 'imagezoomer__inner'
+};
 
 const zoomConf = {
-  zoom: 12
-}
+	zoom : 9
+};
 
 storiesOf('ImageZoomer', module)
-  .add('Default', withInfo(`
+	.add(
+		'Default',
+		withInfo(`
   Default usage
 
   ~~~js
   <ImageZoomer image="https://source.unsplash.com/random" />
   ~~~
 
-`)(() =>(
-    <div style={{width: '500px', height:'500px'}}> 
-      <ImageZoomer image="https://source.unsplash.com/random" />
-    </div>))
-  )
-  .add('Custom Classes', withInfo(`
+`)(() => (
+			<div
+				style={{
+					width  : '500px',
+					height : '500px'
+				}}
+			>
+				<ImageZoomer alt="random image" alt="random image" image="https://source.unsplash.com/random" />
+			</div>
+		))
+	)
+	.add(
+		'Custom Classes',
+		withInfo(`
   Custom  classes usage
 
   ~~~js
@@ -37,26 +46,40 @@ storiesOf('ImageZoomer', module)
     zoomerContainerClass: 'imagezoomer',
     zoomerClass: 'imagezoomer__inner'
   }
-  <ImageZoomer conf={conf} image="https://source.unsplash.com/random" />
+  <ImageZoomer alt="random image" conf={conf} image="https://source.unsplash.com/random" />
   ~~~
 
 `)(() => (
-    <div style={{width: '500px', height:'500px'}}> 
-      <ImageZoomer conf={conf} image="https://source.unsplash.com/random" />
-    </div>
-  )))
-  .add('Custom Zoom', withInfo(`
+			<div
+				style={{
+					width  : '500px',
+					height : '500px'
+				}}
+			>
+				<ImageZoomer alt="random image" conf={conf} image="https://source.unsplash.com/random" />
+			</div>
+		))
+	)
+	.add(
+		'Custom Zoom',
+		withInfo(`
   Custom Zoom usage
 
   ~~~js
   const zoomConf = {
     zoom: 12
   }
-  <ImageZoomer conf={zoomConf} image="https://source.unsplash.com/random" />
+  <ImageZoomer alt="random image" conf={zoomConf} image="https://source.unsplash.com/random" />
   ~~~
 
 `)(() => (
-      <div style={{width: '500px', height:'500px'}}> 
-        <ImageZoomer conf={zoomConf} image="https://source.unsplash.com/random" />
-      </div>
-  )));   
+			<div
+				style={{
+					width  : '500px',
+					height : '500px'
+				}}
+			>
+				<ImageZoomer alt="random image" conf={zoomConf} image="https://source.unsplash.com/random" />
+			</div>
+		))
+	);

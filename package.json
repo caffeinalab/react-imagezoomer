@@ -1,6 +1,6 @@
 {
   "name": "@caffeina.dev/react-imagezoomer",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "React component for zoom an image on mouse over",
   "scripts": {
     "dev": "concurrently 'yarn run watch' 'npm run storybook' ",

@@ -2,7 +2,7 @@ export default {
   zoomercontainer: {
     position: 'relative',
     width: '100%',
-    height: '100%',
+    height: 'auto',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
